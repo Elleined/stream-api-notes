@@ -23,10 +23,10 @@ Notes for Java Stream API
   Person fooBarPerson = new Person("FooBar", 23);
 
   // Creating a list of person
-  List<Person> names = Arrays.asList(fooPerson, barPerson, fooBarPerson);
+  List<Person> persons = Arrays.asList(fooPerson, barPerson, fooBarPerson);
     
   // Will return only the persons that age is greater than or equal to 22    
-  List<Person> personWithFilteredAge = names.stream()
+  List<Person> personsWithFilteredAge = persons.stream()
     .filter(person -> person.age() >= 22)
     .toList();
   ```
@@ -45,10 +45,10 @@ Notes for Java Stream API
   Person fooBarPerson = new Person("FooBar", 23, 15_000);
         
   // Creating a list of person
-  List<Person> names = Arrays.asList(fooPerson, barPerson, fooBarPerson);
+  List<Person> persons = Arrays.asList(fooPerson, barPerson, fooBarPerson);
     
   // Adding 2_000 for each person salary
-  names.stream()
+  persons.stream()
     .map(person -> person.salary() + 2_000)
     .forEach(System.out::println);
   ```
@@ -61,7 +61,17 @@ Notes for Java Stream API
   ```
 - ###### Code sample
   ```
-  
+  // Declaring person objects
+  Person fooPerson = new Person("Foo", 21, 5_000);
+  Person barPerson = new Person("Bar", 22, 10_000);
+  Person fooBarPerson = new Person("FooBar", 23, 15_000);
+        
+  // Creating a list of person
+  List<Person> persons = Arrays.asList(fooPerson, barPerson, fooBarPerson);
+    
+  // Printing each person in the list
+  persons.stream()
+    .forEach(System.out::println);
   ```
 #### sorted
 - sort the elements in natural order and specified comparator
