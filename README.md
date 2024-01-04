@@ -82,7 +82,18 @@ Notes for Java Stream API
   ```
 - ###### Code sample
   ```
-  
+  // Declaring person objects
+  Person fooPerson = new Person("Foo", 21, 5_000);
+  Person barPerson = new Person("Bar", 22, 10_000);
+  Person fooBarPerson = new Person("FooBar", 23, 15_000);
+        
+  // Creating a list of person
+  List<Person> persons = Arrays.asList(fooPerson, barPerson, fooBarPerson);
+    
+  // Sorting person list via age
+  persons.stream()
+    .sorted(Comparator.comparing(Person::age))
+    .forEach(System.out::println);
   ```
 
 #### flatMap
