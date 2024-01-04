@@ -7,9 +7,15 @@ Notes for Java Stream API
 ### Stream API methods
 #### filter
 - will return all the values as long as condition is true.
-```
-Stream<T> filter(Predicate<T> condition)
-```
+- ###### Method signature
+  ```
+  Stream<T> filter(Predicate<T> condition)
+  ```
+- ###### Code sample
+  ```
+  
+  ```
+
 #### map
 - process each element and returns the processed element
 ```
