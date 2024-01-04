@@ -224,7 +224,17 @@ Notes for Java Stream API
   ```
 - ###### Code sample
   ```
-  
+  // Declaring person objects
+  Person fooPerson = new Person("Foo", 21, 5_000);
+  Person barPerson = new Person("Bar", 22, 10_000);
+  Person fooBarPerson = new Person("FooBar", 23, 15_000);
+
+  // Creating a list of person
+  List<Person> persons = Arrays.asList(fooPerson, barPerson, fooBarPerson);
+
+  // See if all of the person salary is greater than 5_000
+  boolean allMatch = persons.stream()
+    .allMatch(person -> person.salary() > 5_000);
   ```
 
 #### anyMatch
@@ -235,7 +245,17 @@ Notes for Java Stream API
   ```
 - ###### Code sample
   ```
-  
+  // Declaring person objects
+  Person fooPerson = new Person("Foo", 21, 5_000);
+  Person barPerson = new Person("Bar", 22, 10_000);
+  Person fooBarPerson = new Person("FooBar", 23, 15_000);
+
+  // Creating a list of person
+  List<Person> persons = Arrays.asList(fooPerson, barPerson, fooBarPerson);
+
+  // See if any of the person salary is greater than 5_000
+  boolean anyMatch = persons.stream()
+    .anyMatch(person -> person.salary() > 5_000);  
   ```
 
 #### noneMatch
@@ -246,7 +266,17 @@ Notes for Java Stream API
   ```
 - ###### Code sample
   ```
-  
+  // Declaring person objects
+  Person fooPerson = new Person("Foo", 21, 5_000);
+  Person barPerson = new Person("Bar", 22, 10_000);
+  Person fooBarPerson = new Person("FooBar", 23, 15_000);
+
+  // Creating a list of person
+  List<Person> persons = Arrays.asList(fooPerson, barPerson, fooBarPerson);
+
+  // See if none of the person salary is greater than 5_000
+  boolean noneMatch = persons.stream()
+    .noneMatch(person -> person.salary() > 5_000);    
   ```
 
 #### findFirst
