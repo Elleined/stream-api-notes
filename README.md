@@ -39,7 +39,18 @@ Notes for Java Stream API
   ```
 - ###### Code sample
   ```
-  
+  // Declaring person objects
+  Person fooPerson = new Person("Foo", 21, 5_000);
+  Person barPerson = new Person("Bar", 22, 10_000);
+  Person fooBarPerson = new Person("FooBar", 23, 15_000);
+        
+  // Creating a list of person
+  List<Person> names = Arrays.asList(fooPerson, barPerson, fooBarPerson);
+    
+  // Adding 2_000 for each person salary
+  names.stream()
+    .map(person -> person.salary() + 2_000)
+    .forEach(System.out::println);
   ```
   
 #### forEach
