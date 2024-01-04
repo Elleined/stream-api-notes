@@ -6,7 +6,7 @@ Notes for Java Stream API
 
 # What is stream() method do?
 - Stream<E> stream() method is called to use Stream API
-- Stream<E> stream() serves as entry point to Stream API for us to use its functionalities
+- Stream<E> stream() serves as entry point for us to access Stream API methods 
 
 ### Stream API methods
 #### filter
@@ -17,7 +17,18 @@ Notes for Java Stream API
   ```
 - ###### Code sample
   ```
-  
+  // Declaring person objects
+  Person fooPerson = new Person("Foo", 21);
+  Person barPerson = new Person("Bar", 22);
+  Person fooBarPerson = new Person("FooBar", 23);
+
+  // Creating a list of person
+  List<Person> names = Arrays.asList(fooPerson, barPerson, fooBarPerson);
+    
+  // Will return only the persons that age is greater than or equal to 22    
+  List<Person> personWithFilteredAge = names.stream()
+    .filter(person -> person.age() >= 22)
+    .toList();
   ```
 
 #### map
