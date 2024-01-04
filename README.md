@@ -287,7 +287,17 @@ Notes for Java Stream API
   ```
 - ###### Code sample
   ```
-  
+  // Declaring person objects
+  Person fooPerson = new Person("Foo", 21, 5_000);
+  Person barPerson = new Person("Bar", 22, 10_000);
+  Person fooBarPerson = new Person("FooBar", 23, 15_000);
+
+  // Creating a list of person
+  List<Person> persons = Arrays.asList(fooPerson, barPerson, fooBarPerson);
+
+  Optional<Person> findFIrst = persons.stream()
+    .map(person -> person.age() > 20)
+    .findFirst();
   ```
 
 #### findAny
@@ -298,7 +308,17 @@ Notes for Java Stream API
   ```
 - ###### Code sample
   ```
-  
+  // Declaring person objects
+  Person fooPerson = new Person("Foo", 21, 5_000);
+  Person barPerson = new Person("Bar", 22, 10_000);
+  Person fooBarPerson = new Person("FooBar", 23, 15_000);
+
+  // Creating a list of person
+  List<Person> persons = Arrays.asList(fooPerson, barPerson, fooBarPerson);
+
+  Optional<Person> findAny = persons.stream()
+    .map(person -> person.age() > 20)
+    .findAny();  
   ```
 
 #### limit
@@ -309,7 +329,18 @@ Notes for Java Stream API
   ```
 - ###### Code sample
   ```
-  
+  // Declaring person objects
+  Person fooPerson = new Person("Foo", 21, 5_000);
+  Person barPerson = new Person("Bar", 22, 10_000);
+  Person fooBarPerson = new Person("FooBar", 23, 15_000);
+
+  // Creating a list of person
+  List<Person> persons = Arrays.asList(fooPerson, barPerson, fooBarPerson);
+
+  persons.stream()
+    .map(person -> person.age() > 20)
+    .limit(10)
+    .forEach(System.out::println);
   ```
 
 #### toList
@@ -320,5 +351,15 @@ Notes for Java Stream API
   ```
 - ###### Code sample
   ```
-  
+  // Declaring person objects
+  Person fooPerson = new Person("Foo", 21, 5_000);
+  Person barPerson = new Person("Bar", 22, 10_000);
+  Person fooBarPerson = new Person("FooBar", 23, 15_000);
+
+  // Creating a list of person
+  List<Person> persons = Arrays.asList(fooPerson, barPerson, fooBarPerson);
+
+  List<Person> filteredPerson = persons.stream()
+    .map(person -> person.age() > 20)
+    .toList();
   ```
