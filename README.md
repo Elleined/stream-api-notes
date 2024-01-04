@@ -137,7 +137,17 @@ Notes for Java Stream API
   ```
 - ###### Code sample
   ```
-  
+  // Declaring person objects
+  Person fooPerson = new Person("Foo", 21, 5_000);
+  Person barPerson = new Person("Bar", 22, 10_000);
+  Person fooBarPerson = new Person("FooBar", 23, 15_000);
+
+  // Creating a list of person
+  List<Person> persons = Arrays.asList(fooPerson, barPerson, fooBarPerson);
+
+  // Finding the person with the minimum age
+  Optional<Person> minAgePerson = persons.stream()
+    .min((p1, p2) -> Integer.compare(p1.getAge(), p2.getAge()));
   ```
 
 #### max
@@ -148,7 +158,17 @@ Notes for Java Stream API
   ```
 - ###### Code sample
   ```
-  
+  // Declaring person objects
+  Person fooPerson = new Person("Foo", 21, 5_000);
+  Person barPerson = new Person("Bar", 22, 10_000);
+  Person fooBarPerson = new Person("FooBar", 23, 15_000);
+
+  // Creating a list of person
+  List<Person> persons = Arrays.asList(fooPerson, barPerson, fooBarPerson);
+
+  // Finding the person with the minimum age
+  Optional<Person> minAgePerson = persons.stream()
+    .max((p1, p2) -> Integer.compare(p1.getAge(), p2.getAge()));
   ```
 
 ##### reduce
@@ -159,7 +179,18 @@ Notes for Java Stream API
   ```
 - ###### Code sample
   ```
-  
+  // Declaring person objects
+  Person fooPerson = new Person("Foo", 21, 5_000);
+  Person barPerson = new Person("Bar", 22, 10_000);
+  Person fooBarPerson = new Person("FooBar", 23, 15_000);
+
+  // Creating a list of person
+  List<Person> persons = Arrays.asList(fooPerson, barPerson, fooBarPerson);
+
+  // Get the total salary of the company
+  double totalSalary = persons.stream()
+    .map(Person::salary)
+    .reduce(0, (t, s) -> t + s);
   ```
   
 #### peek
@@ -170,7 +201,19 @@ Notes for Java Stream API
   ```
 - ###### Code sample
   ```
-  
+  // Declaring person objects
+  Person fooPerson = new Person("Foo", 21, 5_000);
+  Person barPerson = new Person("Bar", 22, 10_000);
+  Person fooBarPerson = new Person("FooBar", 23, 15_000);
+
+  // Creating a list of person
+  List<Person> persons = Arrays.asList(fooPerson, barPerson, fooBarPerson);
+
+  // Get the total salary of the company
+  double totalSalary = persons.stream()
+    .map(Person::salary)
+    .peek(System.out::println)
+    .reduce(0, (t, s) -> t + s);  
   ```
 
 #### allMatch
