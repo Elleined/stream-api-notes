@@ -115,7 +115,18 @@ Notes for Java Stream API
   ```
 - ###### Code sample
   ```
-  
+  // Declaring person objects
+  Person fooPerson = new Person("Foo", 21, 5_000);
+  Person barPerson = new Person("Bar", 22, 10_000);
+  Person fooBarPerson = new Person("FooBar", 23, 15_000);
+        
+  // Creating a list of person
+  List<Person> persons = Arrays.asList(fooPerson, barPerson, fooBarPerson);
+    
+  // Get the count of persons who age is greater than 22
+  long personCount = persons.stream()
+    .filter(person -> person.age() > 22)
+    .count();
   ```
 
 #### min
