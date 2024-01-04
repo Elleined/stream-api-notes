@@ -18,92 +18,176 @@ Notes for Java Stream API
 
 #### map
 - process each element and returns the processed element
-```
-R Stream<R> map(Function<T, R> mapper)
-```
+- ###### Method signature
+  ```
+  R Stream<R> map(Function<T, R> mapper)
+  ```
+- ###### Code sample
+  ```
+  
+  ```
+  
 #### forEach
 - process each element and returns void
-```
-void forEach(Consumer<T> consumer)
-```
+- ###### Method signature
+  ```
+  void forEach(Consumer<T> consumer)
+  ```
+- ###### Code sample
+  ```
+  
+  ```
 #### sorted
 - sort the elements in natural order and specified comparator
-```
-Stream<T> sorted()
-Stream<T> sorted(Comparator<T> comparator)
-```
+- ###### Method signature
+  ```
+  Stream<T> sorted()
+  Stream<T> sorted(Comparator<T> comparator)
+  ```
+- ###### Code sample
+  ```
+  
+  ```
 
 #### flatMap
 - used for transforming and flattening of collection
-```
-Stream<T> flatMap(Function<Stream<T>> mapper)
-```
+- ###### Method signature
+  ```
+  Stream<T> flatMap(Function<Stream<T>> mapper)
+  ```
+- ###### Code sample
+  ```
+  
+  ```
 
 #### count
 - returns the size of processed collection
-```
-long count()
-```
+- ###### Method signature
+  ```
+  long count()
+  ```
+- ###### Code sample
+  ```
+  
+  ```
+
 #### min
 - will return the lowest value in the collection.
-```
-Optional<T> min(Comparator<T> comparator)
-```
+- ###### Method signature
+  ```
+  Optional<T> min(Comparator<T> comparator)
+  ```
+- ###### Code sample
+  ```
+  
+  ```
+
 #### max
 - will return the max value in the collection.
-```
-Optional<T> max(Comparator<T> comparator)
-```
+- ###### Method signature
+  ```
+  Optional<T> max(Comparator<T> comparator)
+  ```
+- ###### Code sample
+  ```
+  
+  ```
 
 ##### reduce
 - will return the combined value of all the elements in collection
-```
-Optional<T> reduce(BinaryOperator<T> accumilator) 
-```
+- ###### Method signature
+  ```
+  Optional<T> reduce(BinaryOperator<T> accumilator)
+  ```
+- ###### Code sample
+  ```
+  
+  ```
+  
 #### peek
 - used to see the elements while processing it.
-```
-Stream<T> peek(Consumer<T> action)
-```
+- ###### Method signature
+  ```
+  Stream<T> peek(Consumer<T> action)
+  ```
+- ###### Code sample
+  ```
+  
+  ```
 
 #### allMatch
 - will return true if given condition match will all the elements.
-```
-boolean allMatch(Predicate<T> condition)
-```
+- ###### Method signature
+  ```
+  boolean allMatch(Predicate<T> condition)
+  ```
+- ###### Code sample
+  ```
+  
+  ```
 
 #### anyMatch
 - will return true if any of the element match with the given condition.
-```
-boolean anyMatch(Predicate<T> condition)
-```
+- ###### Method signature
+  ```
+  boolean anyMatch(Predicate<T> condition)
+  ```
+- ###### Code sample
+  ```
+  
+  ```
 
 #### noneMatch
 - will return true if there no element match with the given condition.
-```
-boolean noneMatch(Predicate<T> condition)
-```
+- ###### Method signature
+  ```
+  boolean noneMatch(Predicate<T> condition)
+  ```
+- ###### Code sample
+  ```
+  
+  ```
 
 #### findFirst
 - returns the first element of stream
-```
-Optional<T> findFirst()
-```
+- ###### Method signature
+  ```
+  Optional<T> findFirst()
+  ```
+- ###### Code sample
+  ```
+  
+  ```
 
 #### findAny
 - will pick random values in stream elements.
-```
-Optional<T> findAny()
-```
+- ###### Method signature
+  ```
+  Optional<T> findAny()
+  ```
+- ###### Code sample
+  ```
+  
+  ```
 
 #### limit
 - will limit the element that can be process in stream
-```
-Stream<T> limit(int maxSize)
-```
+- ###### Method signature
+  ```
+  Stream<T> limit(int maxSize)
+  ```
+- ###### Code sample
+  ```
+  
+  ```
 
 #### toList
 - returns the process element into list.
-```
-List<T> toList()
-```
+- ###### Method signature
+  ```
+  List<T> toList()
+  ```
+- ###### Code sample
+  ```
+  
+  ```
