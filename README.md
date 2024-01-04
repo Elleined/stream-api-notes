@@ -4,6 +4,10 @@ Notes for Java Stream API
 # Stream API
 - Is used for processing collections and arrays.
 
+# What is stream() method do?
+- Stream<E> stream() method is called to use Stream API
+- Stream<E> stream() serves as entry point to Stream API for us to use its functionalities
+
 ### Stream API methods
 #### filter
 - will return all the values as long as condition is true.
